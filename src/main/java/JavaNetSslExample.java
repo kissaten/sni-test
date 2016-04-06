@@ -1,7 +1,6 @@
 import java.net.URL;
 import java.io.*;
 import java.security.SecureRandom;
-import java.security.Security;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import javax.net.ssl.*;
