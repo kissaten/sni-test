@@ -1,9 +1,12 @@
 import java.net.URL;
 import java.io.*;
 import java.security.SecureRandom;
+import java.security.Security;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import javax.net.ssl.*;
+
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class JavaNetSslExample
 {
@@ -37,6 +40,8 @@ public class JavaNetSslExample
 
   public static void main(String[] args) throws Exception
   {
+    Security.addProvider(new BouncyCastleProvider());
+
     SSLContext sc = getWeakSSLContext();
     SSLContext.setDefault(sc);
 
