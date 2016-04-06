@@ -40,8 +40,6 @@ public class JavaNetSslExample
 
   public static void main(String[] args) throws Exception
   {
-    //Security.addProvider(new BouncyCastleProvider());
-
     SSLContext sc = getWeakSSLContext();
     SSLContext.setDefault(sc);
 
