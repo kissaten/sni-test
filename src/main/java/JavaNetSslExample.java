@@ -22,14 +22,6 @@ public class JavaNetSslExample
       public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException { }
     }};
 
-    // Ignore differences between given hostname and certificate hostname
-    HostnameVerifier hv = new HostnameVerifier() {
-      @Override
-      public boolean verify(String hostname, SSLSession session) {
-        return true;
-      }
-    };
-
     // Install the all-trusting trust manager
     SSLContext sc = SSLContext.getInstance("TLSv1.2");
     sc.init(null, trustAllCerts, new SecureRandom());
