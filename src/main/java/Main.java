@@ -17,7 +17,8 @@ import java.util.Map;
 public class Main {
 
   public static void main(String[] args) throws Exception {
-    (new Main()).get("https://maushaus.party", new HashMap<String, String>());
+    String out = (new Main()).get("https://maushaus.party", new HashMap<String, String>());
+    System.out.println(out);
   }
 
   public static String get(String urlStr, Map<String,String> headers) throws IOException {
