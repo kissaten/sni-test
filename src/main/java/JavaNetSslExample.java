@@ -40,6 +40,15 @@ public class JavaNetSslExample
     SSLContext sc = getWeakSSLContext();
     SSLContext.setDefault(sc);
 
+    SSLContext context = SSLContext.getDefault();
+    SSLSocketFactory sf = context.getSocketFactory();
+    String[] cipherSuites = sf.getSupportedCipherSuites();
+
+    System.out.println("CipherSuite:");
+    for (String cipher : cipherSuites) {
+      System.out.println("  " + cipher);
+    }
+
     String httpsURL = "https://maushaus.party/";
     URL myurl = new URL(httpsURL);
     HttpsURLConnection con = (HttpsURLConnection)myurl.openConnection();
