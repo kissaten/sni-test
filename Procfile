@@ -1,0 +1,1 @@
+sni: java -jar target/app.jar
