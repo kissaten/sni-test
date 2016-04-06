@@ -6,8 +6,6 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import javax.net.ssl.*;
 
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
-
 public class JavaNetSslExample
 {
   private static SSLContext getWeakSSLContext() throws Exception {
